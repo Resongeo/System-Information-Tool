@@ -1,0 +1,14 @@
+{
+  "name": "systeminformationtool",
+  "version": "1.0.0",
+  "description": "A tool to display system information",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Somogyvári Benedek",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^19.0.5"
+  }
+}

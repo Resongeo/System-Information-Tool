@@ -1,0 +1,29 @@
+.theme-light{
+    --bg-col: rgb(234, 234, 234);
+    --font-col: rgb(25, 25, 25);
+    --topbar-bg-col: rgb(206, 206, 206);
+    --topbar-title-col: rgb(78, 78, 78);
+    --navbar-bg-col: rgb(88, 142, 211);
+    --navbar-hover-col: rgb(125, 162, 210);
+    --system-icon: url("../icons/system_dark.png");
+    --cpu-icon: url("../icons/cpu_dark.png");
+    --memory-icon: url("../icons/memory_dark.png");
+    --gpu-icon: url("../icons/gpu_dark.png");
+    --motherboard-icon: url("../icons/motherboard_dark.png");
+    --display-icon: url("../icons/display_dark.png");
+}
+
+.theme-dark{
+    --bg-col: rgb(33, 33, 35);
+    --font-col: rgb(220, 220, 220);
+    --topbar-bg-col: rgb(28, 28, 28);
+    --topbar-title-col: rgb(120, 120, 120);
+    --navbar-bg-col: rgb(53, 101, 165);
+    --navbar-hover-col: rgb(44, 87, 143);
+    --system-icon: url("../icons/system_light.png");
+    --cpu-icon: url("../icons/cpu_light.png");
+    --memory-icon: url("../icons/memory_light.png");
+    --gpu-icon: url("../icons/gpu_light.png");
+    --motherboard-icon: url("../icons/motherboard_light.png");
+    --display-icon: url("../icons/display_light.png");
+}
