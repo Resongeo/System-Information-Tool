@@ -18,16 +18,8 @@ function toggleTheme(){
     console.log(localStorage.getItem("theme"))
 }
 
-function MinimizeApp(){
-    ipcRenderer.send("app:controls", "minimize")
-}
-
-function MaximizeApp(){
-    ipcRenderer.send("app:controls", "maximize")
-}
-
-function CloseApp(){
-    ipcRenderer.send("app:controls", "close")
+function AppControl(type){
+    ipcRenderer.send("app:controls", type)
 }
 
 const system = document.getElementById("system")
