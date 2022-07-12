@@ -29,18 +29,32 @@
 }
 
 .topbar ul li div{
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+    margin: 10px;
     cursor: pointer;
-    padding: 2px;
 }
 
 .topbar .drag-area{
     position: absolute;
     top: 0;
     left: 0;
-    right: 90px;
+    right: 110px;
     height: 100%;
+}
+
+
+.topbar .minimize{
+    background-image: var(--topbar-minimize-icon);
+    background-size: contain;
+}
+
+.topbar .maximize{
+    background-image: var(--topbar-maximize-icon);
+    background-size: contain;
+}
+
+.topbar .close{
+    background-image: var(--topbar-close-icon);
+    background-size: contain;
 }

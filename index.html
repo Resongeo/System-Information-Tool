@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="theme-light">
 <head>
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <title>System Information Tool</title>
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/topbar.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/display.css">
     <script src="js/index.js" defer></script>
+    <script src="js/information.js" defer></script>
 </head>
 <body>
     <div class="topbar">
@@ -15,64 +17,228 @@
         <h1>System Information Tool</h1>
         <ul>
             <li>
-                <div onclick="AppControl('minimize')" class="bg-green"></div>
+                <div onclick="AppControl('minimize')" class="minimize"></div>
             </li>
             <li>
-                <div onclick="AppControl('maximize')" class="bg-yellow"></div>
+                <div onclick="AppControl('maximize')" class="maximize"></div>
             </li>
             <li>
-                <div onclick="AppControl('close')" class="bg-red"></div>
+                <div onclick="AppControl('close')" class="close"></div>
             </li>
         </ul>
     </div>
 
     <div class="navbar">
         <ul>
-            <li>
+            <li onclick="changeCategory('system')">
                 <div class="icon"></div>
                 System
             </li>
-            <li>
+            <li onclick="changeCategory('cpu')">
                 <div class="icon"></div>
                 CPU
             </li>
-            <li>
+            <li onclick="changeCategory('memory')">
                 <div class="icon"></div>
                 Memory
             </li>
-            <li>
+            <li onclick="changeCategory('gpu')">
                 <div class="icon"></div>
                 GPU
             </li>
-            <li>
+            <li onclick="changeCategory('motherboard')">
                 <div class="icon"></div>
                 Motherboard
             </li>
-            <li>
+            <li onclick="changeCategory('display')">
                 <div class="icon"></div>
                 Display
             </li>
         </ul>
-        <button onclick="toggleTheme()" class="btn">Toggle Theme</button>
+        <button onclick="toggleTheme()" class="theme-toggler"></button>
     </div>
     <div class="display">
         <div id="system">
-
+            <h1>System</h1>
+            <ul>
+                <li>
+                    <h3>Manufacturer:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Model:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Version:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Serial:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>UUID:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Virtual:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Sku:</h3>
+                    <span>Loading...</span>
+                </li>
+            </ul>
         </div>
         <div id="cpu">
-
+            <h1>CPU</h1>
+            <ul>
+                <li>
+                    <h3>Manufacturer:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Brand:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Speed:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Cores:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Socket:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Vendor:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Virtualization:</h3>
+                    <span>Loading...</span>
+                </li>
+            </ul>
         </div>
         <div id="memory">
-
+            <h1>Memory</h1>
+            <ul>
+                <li>
+                    <h3>Layout:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Total:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Free:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Used:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Type:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Speed:</h3>
+                    <span>Loading...</span>
+                </li>
+            </ul>
         </div>
         <div id="gpu">
-
+            <h1>GPU</h1>
+            <ul>
+                <li>
+                    <h3>Model:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Bus:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Driver version:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Clock Core:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Clock Memory:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>VRAM:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Power limit:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Temperature:</h3>
+                    <span>Loading...</span>
+                </li>
+            </ul>
         </div>
         <div id="motherboard">
-
+            <h1>Motherboard</h1>
+            <ul>
+                <li>
+                    <h3>Manufacturer:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Model:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Maximum memory:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Memory slots:</h3>
+                    <span>Loading...</span>
+                </li>
+            </ul>
         </div>
         <div id="display">
-
+            <h1>Display</h1>
+            <ul>
+                <li>
+                    <h3>Vendor:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Model:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Resolution:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Main:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Refresh rate:</h3>
+                    <span>Loading...</span>
+                </li>
+                <li>
+                    <h3>Pixel depth:</h3>
+                    <span>Loading...</span>
+                </li>
+            </ul>
         </div>
     </div>
 </body>

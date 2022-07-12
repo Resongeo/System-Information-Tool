@@ -1,14 +1,10 @@
 {
-  "name": "systeminformationtool",
-  "version": "1.0.0",
-  "description": "A tool to display system information",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
+  "name": "SystemInformationTool",
+  "packageManager": "yarn@3.2.1",
+  "devDependencies": {
+    "electron-builder": "^23.1.0"
   },
-  "author": "Somogyvári Benedek",
-  "license": "MIT",
-  "dependencies": {
-    "electron": "^19.0.5"
+  "build": {
+    "appId": "com.resongeo.systeminformationtool"
   }
 }

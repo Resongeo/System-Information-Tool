@@ -15,7 +15,8 @@ app.on("ready", () => {
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false
-        }
+        },
+        icon: "./icons/favicon.ico"
     })
 
     mainWindow.loadFile("index.html")

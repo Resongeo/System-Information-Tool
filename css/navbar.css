@@ -17,6 +17,7 @@
     align-items: center;
     padding: 10px 5px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .navbar ul li:hover{
@@ -52,4 +53,19 @@
 
 .navbar ul li:nth-child(6) .icon{
     background-image: var(--display-icon);
+}
+
+.navbar .theme-toggler{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background-image:var(--theme-toggle-icon);
+    background-color: var(--theme-bg-colr);
+    background-size: cover;
+    margin: 15px 20px;
+    cursor: pointer;
 }
